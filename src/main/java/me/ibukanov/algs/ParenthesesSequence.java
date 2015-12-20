@@ -1,5 +1,6 @@
 package me.ibukanov.algs;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -57,7 +58,7 @@ public class ParenthesesSequence {
     }
 
     private String result() {
-        if (!isPossible()) {
+        if (!isPossible(result)) {
             return "IMPOSSIBLE";
         } else {
             StringBuilder r = new StringBuilder();
@@ -66,9 +67,9 @@ public class ParenthesesSequence {
         }
     }
 
-    private boolean isPossible() {
+    private static boolean isPossible(Collection<Character> res) {
         LinkedList<Character> stack = new LinkedList<>();
-        for (char c: result) {
+        for (char c: res) {
             switch (c) {
                 case '{':
                 case '(':
