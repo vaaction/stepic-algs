@@ -1,14 +1,6 @@
 package me.ibukanov.algs;
 
-import java.util.*;
-
-class Main {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] a = Arrays.stream(sc.nextLine().split(" ")).mapToInt(Integer::valueOf).toArray();
-        System.out.print(alg(a));
-    }
+public class InsertionSort {
 
     public static String alg(int[] a) {
         for (int i = 1; i < a.length; i++) {
